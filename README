@@ -36,5 +36,5 @@ int external_server(int fd_client, char * request_received, char * Host, char * 
 int main(int argc, char * argv[]): call the initialization function and check Arguments
 ===============================================================
 Compiling Steps:
-compile: gcc proxyServer.c threadpool.c -o proxyServer -pthread 
+compile: gcc -Wall -Wextra -Wvla -std=c99 proxyServer.c threadpool.c -o proxyServer -pthread
 run :  ./proxyServer <port> <pool-size> <max-number-of-request> <filter>
