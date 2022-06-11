@@ -37,4 +37,4 @@ int main(int argc, char * argv[]): call the initialization function and check Ar
 ===============================================================
 Compiling Steps:
 compile: gcc -Wall -Wextra -Wvla -std=c99 proxyServer.c threadpool.c -o proxyServer -pthread
-run :  ./proxyServer <port> <pool-size> <max-number-of-request> <filter>
+run : valgrind --track-origins=yes -s --leak-check=full --show-leak-kinds=all --show-leak-kinds=indirect,reachable ./proxyServer <port> <pool-size> <max-number-of-request> <filter>
